@@ -1,5 +1,5 @@
 import { IntlProvider, FormattedMessage, FormattedNumber } from "react-intl";
-import "./App.css";
+import "./style/custom.scss";
 
 const messagesInFrench = {
   myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
