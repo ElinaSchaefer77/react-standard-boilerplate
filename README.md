@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# The React Standard Boilerplate
+
+This boilerplate contains all important dependencies for a standard react project with all important functionalities. It is maintained by the Elfgaben UG (haftungsbeschränkt) as OpenSource.
+The project is bootstrapped
+
+# language
+
+For internationalization

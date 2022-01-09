@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { IntlProvider, FormattedMessage, FormattedNumber } from "react-intl";
+import "./App.css";
+
+const messagesInFrench = {
+  myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IntlProvider messages={messagesInFrench} locale="fr" defaultLocale="en">
+      <p>
+        <FormattedMessage
+          id="myMessage"
+          defaultMessage="Today is {ts, date, ::yyyyMMdd}"
+          values={{ ts: Date.now() }}
+        />
+        <br />
+        <FormattedNumber value={19} style="currency" currency="EUR" />
+      </p>
+    </IntlProvider>
   );
 }
 
