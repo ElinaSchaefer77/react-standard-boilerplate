@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "extract": "formatjs extract"
+    "extract": "formatjs extract",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@formatjs/cli": "^4.7.1",
+    "cypress": "^9.2.0",
     "eslint": "^8.6.0",
     "eslint-plugin-formatjs": "^2.20.2",
     "redux-logger": "^3.0.6"
