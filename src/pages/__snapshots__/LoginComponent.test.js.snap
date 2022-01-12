@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the LoginComponent 1`] = `
+<div>
+  <form
+    obSubmit={[Function]}
+  >
+    <input
+      placeholder="Benutzername"
+      type="text"
+    />
+    <input
+      placeholder="Passwort"
+      type="password"
+    />
+    <button
+      className="btn btn-primary"
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+</div>
+`;
