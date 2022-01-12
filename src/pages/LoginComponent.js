@@ -3,7 +3,7 @@ import React from "react";
 export default function HomeComponent({ onSubmit }) {
   return (
     <div>
-      <form obSubmit={() => onSubmit()}>
+      <form onSubmit={() => onSubmit()}>
         <input type="text" placeholder="Benutzername" />
         <input type="password" placeholder="Passwort" />
         <button type="submit" className="btn btn-primary">

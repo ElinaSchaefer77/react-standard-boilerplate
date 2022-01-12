@@ -3,7 +3,7 @@
 exports[`renders the LoginComponent 1`] = `
 <div>
   <form
-    obSubmit={[Function]}
+    onSubmit={[Function]}
   >
     <input
       placeholder="Benutzername"

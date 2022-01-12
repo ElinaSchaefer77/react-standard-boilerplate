@@ -1,8 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import LoginComponent from '../pages/LoginComponent';
+import { render, screen } from "@testing-library/react";
+import LoginComponent from "./LoginComponent";
 
-it('renders the LoginComponent', () => {
-  const tree = renderer.create(<LoginComponent />).toJSON();
-  expect(tree).toMatchSnapshot();
+test("renders learn react link", () => {
+  render(<LoginComponent />);
+  const buttonElement = screen.getByText(/Login/i);
+  expect(buttonElement).toBeInTheDocument();
 });
