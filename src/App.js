@@ -1,6 +1,7 @@
 import { IntlProvider, FormattedMessage, FormattedNumber } from "react-intl";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Provider } from "react-redux";
+import moment from "moment";
 import "./style/custom.scss";
 import PasswordResetComponent from "./components/PasswordResetComponent";
 import HomeComponent from "./components/HomeComponent";
@@ -12,11 +13,19 @@ const messagesInFrench = {
   myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
 };
 
+const defaultLocale = "de";
+
+moment.locale([defaultLocale]);
+
 function App() {
   return (
     <Provider store={store}>
-      <IntlProvider messages={messagesInFrench} locale="fr" defaultLocale="en">
-        <Router>
+      <IntlProvider
+        messages={messagesInFrench}
+        locale="fr"
+        defaultLocale={defaultLocale}
+      >
+        <Router history={history}>
           <div>
             <p>
               <FormattedMessage
