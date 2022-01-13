@@ -2,12 +2,13 @@ import { IntlProvider, FormattedMessage, FormattedNumber } from "react-intl";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Provider } from "react-redux";
 import moment from "moment";
+import "moment/locale/de";
 import "./style/custom.scss";
-import PasswordResetComponent from "./pages/PasswordResetComponent";
-import HomeComponent from "./pages/HomeComponent";
+import PasswordResetComponent from "./pages/resetpassword/PasswordResetComponent";
+import HomeComponent from "./pages/home/HomeComponent";
 import { store } from "./config/store";
 import history from "./config/history";
-import LoginContainer from "./containers/LoginContainer";
+import LoginContainer from "./pages/login/LoginContainer";
 
 const messagesInFrench = {
   myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
