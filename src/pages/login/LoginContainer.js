@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import LoginComponent from "./LoginComponent";
-import { fetchRequestLogin } from "../actions/loginActions";
+import { fetchRequestLogin } from "../../actions/loginActions";
 
 const mapDispatchToProps = (dispatch) => ({
   onSubmit: (userName, password) =>
