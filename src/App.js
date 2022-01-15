@@ -28,7 +28,7 @@ function App() {
       >
         <Router history={history}>
           <div>
-            <p>
+            {/* <p>
               <FormattedMessage
                 id="myMessage"
                 defaultMessage="Today is {ts, date, ::yyyyMMdd}"
@@ -49,7 +49,7 @@ function App() {
                   <Link to="/resetpassword">Passwort zurücksetzen</Link>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
 
             {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}

@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function HomeComponent({ onSubmit, isFetching, loginError }) {
+export default function LoginComponent({ onSubmit, isFetching, loginError }) {
   return (
-    <div className="app flex-row align-items-center">
+    <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8">
