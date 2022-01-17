@@ -1,4 +1,5 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 
 export default function LoginComponent({ onSubmit, isFetching, loginError }) {
   return (
@@ -11,10 +12,20 @@ export default function LoginComponent({ onSubmit, isFetching, loginError }) {
                 <div className="card p-4 shadow login-left">
                   <div className="card-body">
                     <form onSubmit={onSubmit}>
-                      <h1>Titel</h1>
-                      <p>Text</p>
+                      <h1>
+                        <FormattedMessage
+                          id="login.form.title"
+                          defaultMessage="Login"
+                        />
+                      </h1>
+                      <p>
+                        <FormattedMessage
+                          id="login.form.text"
+                          defaultMessage="Enter your login data to log in to your account."
+                        />
+                      </p>
                       <div className="input-group mb-3">
-                        <span className="input-group-text">Benutzername</span>
+                        <span className="input-group-text">ICON TODO</span>
 
                         <input
                           name="userName"
@@ -25,7 +36,7 @@ export default function LoginComponent({ onSubmit, isFetching, loginError }) {
                         />
                       </div>
                       <div className="input-group mb-4">
-                        <span className="input-group-text">Passwort</span>
+                        <span className="input-group-text">ICON TODO</span>
                         <input
                           name="password"
                           type="password"
@@ -52,7 +63,10 @@ export default function LoginComponent({ onSubmit, isFetching, loginError }) {
                             className="btn btn-primary px-4"
                             type="submit"
                           >
-                            Login
+                            <FormattedMessage
+                              id="login.form.button.login"
+                              defaultMessage="Login"
+                            />
                           </button>
                         </div>
                         <div className="col-md-6 text-right">
@@ -61,7 +75,10 @@ export default function LoginComponent({ onSubmit, isFetching, loginError }) {
                             className="btn btn-link px-0"
                             // onClick={() => history.push("/resetP assword")}
                           >
-                            Passwort vergessen?
+                            <FormattedMessage
+                              id="login.form.button.forgotpassword"
+                              defaultMessage="Forgot password?"
+                            />
                           </button>
                         </div>
                       </div>
@@ -74,8 +91,18 @@ export default function LoginComponent({ onSubmit, isFetching, loginError }) {
                 >
                   <div className="card-body text-center">
                     <div>
-                      <h2>Titel</h2>
-                      <p>text</p>
+                      <h2>
+                        <FormattedMessage
+                          id="login.form.title.register"
+                          defaultMessage="Register"
+                        />
+                      </h2>
+                      <p>
+                        <FormattedMessage
+                          id="login.form.text.register"
+                          defaultMessage="TODO"
+                        />
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -86,7 +113,12 @@ export default function LoginComponent({ onSubmit, isFetching, loginError }) {
                   <div className="card-body text-center">
                     <div>
                       {/* <HashLoader clasName="primary" /> */}
-                      <p>Loading</p>
+                      <p>
+                        <FormattedMessage
+                          id="loading"
+                          defaultMessage="Loading..."
+                        />
+                      </p>
                     </div>
                   </div>
                 </div>
