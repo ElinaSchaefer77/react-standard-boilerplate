@@ -9,6 +9,7 @@ import HomeComponent from "./pages/home/HomeComponent";
 import { store } from "./config/store";
 import history from "./config/history";
 import LoginContainer from "./pages/login/LoginContainer";
+import Navigation from "./landingpage/navigation";
 
 const messagesInFrench = {
   myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
@@ -28,6 +29,7 @@ function App() {
       >
         <Router history={history}>
           <div>
+            <Navigation />
             {/* <p>
               <FormattedMessage
                 id="myMessage"
