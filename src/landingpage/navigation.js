@@ -1,70 +1,24 @@
 import React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { FormattedMessage } from "react-intl";
+import navigation from "../config/landingpage/navigation.json";
 
-const Navigation = (props) => (
-  <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
-  <div className='container'>
-    <div className='navbar-header'>
-      <button
-        type='button'
-        className='navbar-toggle collapsed'
-        data-toggle='collapse'
-        data-target='#bs-example-navbar-collapse-1'
-      >
-        {' '}
-        <span className='sr-only'>Toggle navigation</span>{' '}
-        <span className='icon-bar'></span>{' '}
-        <span className='icon-bar'></span>{' '}
-        <span className='icon-bar'></span>{' '}
-      </button>
-      <a className='navbar-brand page-scroll' href='#page-top'>
-        React Landing Page
-      </a>{' '}
-    </div>
-
-    <div
-      className='collapse navbar-collapse'
-      id='bs-example-navbar-collapse-1'
-    >
-      <ul className='nav navbar-nav navbar-right'>
-        <li>
-          <a href='#features' className='page-scroll'>
-            Features
-          </a>
-        </li>
-        <li>
-          <a href='#about' className='page-scroll'>
-            About
-          </a>
-        </li>
-        <li>
-          <a href='#services' className='page-scroll'>
-            Services
-          </a>
-        </li>
-        <li>
-          <a href='#portfolio' className='page-scroll'>
-            Gallery
-          </a>
-        </li>
-        <li>
-          <a href='#testimonials' className='page-scroll'>
-            Testimonials
-          </a>
-        </li>
-        <li>
-          <a href='#team' className='page-scroll'>
-            Team
-          </a>
-        </li>
-        <li>
-          <a href='#contact' className='page-scroll'>
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+const Navigation = () => (
+  <Navbar bg="light" expand="lg">
+    <Container>
+      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+        <Nav className="me-auto">
+          {navigation.map((item) => (
+            <Nav.Link href={item.linkTo} key={item.id}>
+              <FormattedMessage id={item.id} />
+            </Nav.Link>
+          ))}
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
 );
 
 export default Navigation;

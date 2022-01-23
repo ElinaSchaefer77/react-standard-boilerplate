@@ -10,10 +10,7 @@ import { store } from "./config/store";
 import history from "./config/history";
 import LoginContainer from "./pages/login/LoginContainer";
 import Navigation from "./landingpage/navigation";
-
-const messagesInFrench = {
-  myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
-};
+import de from "./lang/de.json";
 
 const defaultLocale = "de";
 
@@ -22,11 +19,7 @@ moment.locale([defaultLocale]);
 function App() {
   return (
     <Provider store={store}>
-      <IntlProvider
-        messages={messagesInFrench}
-        locale="fr"
-        defaultLocale={defaultLocale}
-      >
+      <IntlProvider messages={de} locale="de" defaultLocale={defaultLocale}>
         <Router history={history}>
           <div>
             <Navigation />

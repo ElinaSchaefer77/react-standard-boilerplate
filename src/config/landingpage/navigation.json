@@ -1,0 +1,30 @@
+[
+  {
+    "id": "nav-features",
+    "linkTo": "#"
+  },
+  {
+    "id": "nav-about",
+    "linkTo": "#"
+  },
+  {
+    "id": "nav-services",
+    "linkTo": "#"
+  },
+  {
+    "id": "nav-gallery",
+    "linkTo": "#"
+  },
+  {
+    "id": "nav-testimonials",
+    "linkTo": "#"
+  },
+  {
+    "id": "nav-team",
+    "linkTo": "#"
+  },
+  {
+    "id": "nav-contact",
+    "linkTo": "#"
+  }
+]
